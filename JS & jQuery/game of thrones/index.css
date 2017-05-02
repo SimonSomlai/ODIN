@@ -1,0 +1,36 @@
+/*
+Error: The line was indented 2 levels deeper than the previous line.
+        on line 30 of /home/simon/Desktop/js/index.html
+
+25:     </ul>
+26: 
+27: 
+28:     <h2>Place your bets!</h2>
+29:     <ul class="sequence">
+30:         <li><a href="#" class="previous">previous</a></li>
+31:         <li><a href="#" class="next">next</a></li>
+32:     </ul>
+33: 
+34:     <ul class="score">
+35: 
+
+Backtrace:
+/home/simon/Desktop/js/index.html:30
+/home/simon/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/engine.rb:520:in `tree'
+/home/simon/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/engine.rb:524:in `tree'
+/home/simon/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/engine.rb:524:in `tree'
+/home/simon/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/engine.rb:409:in `_to_tree'
+/home/simon/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/engine.rb:381:in `_render_with_sourcemap'
+/home/simon/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/engine.rb:298:in `render_with_sourcemap'
+/home/simon/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/exec/sass_scss.rb:391:in `run'
+/home/simon/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/exec/sass_scss.rb:63:in `process_result'
+/home/simon/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/exec/base.rb:52:in `parse'
+/home/simon/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/exec/base.rb:19:in `parse!'
+/home/simon/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.4.23/bin/sass:13:in `<top (required)>'
+/home/simon/.rbenv/versions/2.3.1/bin/sass:23:in `load'
+/home/simon/.rbenv/versions/2.3.1/bin/sass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: The line was indented 2 levels deeper than the previous line.\A         on line 30 of /home/simon/Desktop/js/index.html\A \A 25:     </ul>\A 26: \A 27: \A 28:     <h2>Place your bets!</h2>\A 29:     <ul class=\"sequence\">\A 30:         <li><a href=\"#\" class=\"previous\">previous</a></li>\A 31:         <li><a href=\"#\" class=\"next\">next</a></li>\A 32:     </ul>\A 33: \A 34:     <ul class=\"score\">\A 35: "; }

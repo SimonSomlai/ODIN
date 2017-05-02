@@ -1,0 +1,12 @@
+<h1> Articles Tagged With "<%= @tag.name.capitalize %>" </h1>
+
+  <ul>
+  	<% @tag.articles.each do |article| %>
+    <li> <%= link_to article.title, article_path(article) %></li><br/>
+  	<% end %>
+  </ul>
+
+  <hr/>
+
+<%= link_to 'All Articles', articles_path %> 
+

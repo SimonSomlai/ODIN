@@ -1,0 +1,51 @@
+/*
+Error: Invalid variable: "$(".sequence").append(html2)".
+        on line 17 of /home/simon/Desktop/js/assets/js/script.js
+
+12:     var html = '<li data-title=' + images[i] + ' class="' + images[i] + '"><figure>' +
+13:     '<img src="assets/images/' + images[i] + '-1920.jpg" alt="' + name + '" title="' + name + '"/>' +
+14:     '<figcaption>'+ name +'</figcaption>' +
+15:     '</figure></li>'
+16:     var html2 = '<li><a class="index" data-title= ' + images[i] + ' href="#">' + parseInt(i + 1) + '</a></li>'
+17:     $(".sequence").append(html2)
+18:     $(".carousel").append(html);
+19:     $(".carousel li:nth-child(1)").addClass("active");
+20:     $(".sequence li:nth-child(3) a").addClass("active");
+21:   }
+22:   var html3 = '<li><a class="pull-right score-calculator" href="#">Get the score!</a></li>'
+
+Backtrace:
+/home/simon/Desktop/js/assets/js/script.js:17
+/home/simon/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/engine.rb:745:in `parse_variable'
+/home/simon/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/engine.rb:642:in `parse_line'
+/home/simon/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/engine.rb:536:in `build_tree'
+/home/simon/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/engine.rb:555:in `block in append_children'
+/home/simon/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/engine.rb:554:in `each'
+/home/simon/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/engine.rb:554:in `append_children'
+/home/simon/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/engine.rb:545:in `block in build_tree'
+/home/simon/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/engine.rb:538:in `each'
+/home/simon/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/engine.rb:538:in `build_tree'
+/home/simon/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/engine.rb:555:in `block in append_children'
+/home/simon/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/engine.rb:554:in `each'
+/home/simon/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/engine.rb:554:in `append_children'
+/home/simon/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/engine.rb:545:in `block in build_tree'
+/home/simon/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/engine.rb:538:in `each'
+/home/simon/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/engine.rb:538:in `build_tree'
+/home/simon/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/engine.rb:555:in `block in append_children'
+/home/simon/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/engine.rb:554:in `each'
+/home/simon/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/engine.rb:554:in `append_children'
+/home/simon/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/engine.rb:409:in `_to_tree'
+/home/simon/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/engine.rb:381:in `_render_with_sourcemap'
+/home/simon/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/engine.rb:298:in `render_with_sourcemap'
+/home/simon/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/exec/sass_scss.rb:391:in `run'
+/home/simon/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/exec/sass_scss.rb:63:in `process_result'
+/home/simon/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/exec/base.rb:52:in `parse'
+/home/simon/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/exec/base.rb:19:in `parse!'
+/home/simon/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.4.23/bin/sass:13:in `<top (required)>'
+/home/simon/.rbenv/versions/2.3.1/bin/sass:23:in `load'
+/home/simon/.rbenv/versions/2.3.1/bin/sass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid variable: \"$(\".sequence\").append(html2)\".\A         on line 17 of /home/simon/Desktop/js/assets/js/script.js\A \A 12:     var html = '<li data-title=' + images[i] + ' class=\"' + images[i] + '\"><figure>' +\A 13:     '<img src=\"assets/images/' + images[i] + '-1920.jpg\" alt=\"' + name + '\" title=\"' + name + '\"/>' +\A 14:     '<figcaption>'+ name +'</figcaption>' +\A 15:     '</figure></li>'\A 16:     var html2 = '<li><a class=\"index\" data-title= ' + images[i] + ' href=\"#\">' + parseInt(i + 1) + '</a></li>'\A 17:     $(\".sequence\").append(html2)\A 18:     $(\".carousel\").append(html);\A 19:     $(\".carousel li:nth-child(1)\").addClass(\"active\");\A 20:     $(\".sequence li:nth-child(3) a\").addClass(\"active\");\A 21:   }\A 22:   var html3 = '<li><a class=\"pull-right score-calculator\" href=\"#\">Get the score!</a></li>'"; }

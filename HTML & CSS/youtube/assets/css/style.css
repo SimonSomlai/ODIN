@@ -1,0 +1,206 @@
+.col-xs-15,
+.col-sm-15,
+.col-md-15,
+.col-lg-15 {
+  position: relative;
+  min-height: 1px;
+  padding-right: 10px;
+  padding-left: 10px; }
+
+.col-xs-15 {
+  width: 20%;
+  float: left; }
+
+@media (min-width: 768px) {
+  .col-sm-15 {
+    width: 20%;
+    float: left; } }
+@media (min-width: 992px) {
+  .col-md-15 {
+    width: 20%;
+    float: left; } }
+@media (min-width: 1200px) {
+  .col-lg-15 {
+    width: 20%;
+    float: left; } }
+/*---------------------*/
+/* STRUCTURE & GENERAL */
+/*---------------------*/
+html {
+  position: relative;
+  min-height: 100%; }
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: #646E76; }
+
+body a {
+  text-decoration: none;
+  color: #646E76; }
+
+E02D28
+.cf:after,
+.cf:before {
+  content: "";
+  display: table; }
+
+.cf:after {
+  clear: both; }
+
+/*---------------------*/
+/*    HEADER & NAV     */
+/*---------------------*/
+header {
+  height: 50px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  border: 1px solid #ccc; }
+
+.wrapper {
+  display: inline-block; }
+
+button,
+input {
+  background-color: transparent;
+  border: 0; }
+
+.header-left .menu {
+  padding-left: 15px;
+  display: inline-block; }
+  .header-left .menu .img-menu {
+    width: 18px;
+    opacity: 0.3; }
+  .header-left .menu .img-logo {
+    width: 100px;
+    max-height: 100%;
+    padding-left: 10px; }
+.header-left .search {
+  height: 32px;
+  top: 50%;
+  -webkit-transform: translateY(32%);
+  -ms-transform: translateY(32%);
+  transform: translateY(32%);
+  padding-left: 30px;
+  display: inline-block;
+  margin: 0 auto; }
+  .header-left .search .wrapper {
+    border: 1px solid #ccc;
+    height: 100%;
+    width: 100%; }
+    .header-left .search .wrapper input {
+      height: 100%;
+      width: 90%; }
+    .header-left .search .wrapper button {
+      border-left: 1px solid #ccc;
+      padding: 0;
+      height: 100%;
+      width: 9%; }
+      .header-left .search .wrapper button img {
+        width: 14px; }
+
+.header-right {
+  height: 100%; }
+  .header-right .right-menu li {
+    top: 50%;
+    -webkit-transform: translateY(50%);
+    -ms-transform: translateY(50%);
+    transform: translateY(50%);
+    float: right;
+    display: inline-block; }
+    .header-right .right-menu li img {
+      opacity: 0.3;
+      width: 20px;
+      margin-right: 30px; }
+  .header-right .right-menu li.me img {
+    opacity: 1;
+    height: 30;
+    border-radius: 50%; }
+
+/*---------------------*/
+/* 		SIDE           */
+/*---------------------*/
+aside {
+  border-right: 1px solid #ccc;
+  position: absolute;
+  left: 0;
+  top: 50px;
+  bottom: 0;
+  width: 220px;
+  color: #252625;
+  font-size: 13px; }
+  aside .active {
+    background-color: #E02D28;
+    color: white; }
+  aside hr {
+    width: 80%; }
+  aside ul {
+    padding: 0 20px 0 27px;
+    margin-bottom: 10px; }
+    aside ul li {
+      padding: 5px; }
+      aside ul li i {
+        margin-right: 10px;
+        opacity: 0.6; }
+      aside ul li:hover i {
+        color: white; }
+      aside ul li:hover {
+        color: white;
+        background-color: #646E76; }
+  aside h2 {
+    font-weight: bold;
+    font-size: 12px;
+    padding-left: 25px;
+    text-transform: uppercase;
+    color: #E02D28; }
+  aside .aside-row1 {
+    margin-top: 15px; }
+  aside .aside-row3 li img {
+    margin-right: 10px;
+    width: 22px; }
+  aside .aside-row3 span {
+    float: right;
+    font-size: 10px;
+    color: #ccc; }
+
+/*---------------------*/
+/* 		CONTENT  	   */
+/*---------------------*/
+.main {
+  background-color: #ede6e6;
+  position: absolute;
+  left: 220px;
+  top: 50px;
+  right: 0;
+  bottom: 0;
+  padding: 15px 20px 0px 20px; }
+  .main .video-row {
+    padding: 20px;
+    background-color: #fff;
+    margin: 0; }
+    .main .video-row .video-item {
+      margin-bottom: 15px; }
+    .main .video-row h4, .main .video-row p {
+      font-size: 12px;
+      margin: 0; }
+    .main .video-row h4 {
+      margin-top: 5px;
+      font-size: 15px;
+      font-weight: bold;
+      color: #1e9af4; }
+    .main .video-row h3 {
+      font-weight: bold;
+      font-size: 15px;
+      margin: 0;
+      margin-bottom: 15px; }
+    .main .video-row img {
+      max-width: 100%; }
+
+@media screen and (max-width: 1200px) {
+  .main {
+    left: 0; } }
+/*---------------------*/
+/* 		FOOTER 		   */
+/*---------------------*/
+
+/*# sourceMappingURL=style.css.map */

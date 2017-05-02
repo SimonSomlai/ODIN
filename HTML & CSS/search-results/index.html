@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel='stylesheet' href='style.css'/>
+	<script src='script.js'></script>
+</head>
+<body>
+
+<style>
+
+body, html{
+    height: 100%;
+}
+
+*{
+    font-family: Arial;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+/*--------- TOP NAVBAR--------------------- */
+/*GENERAL*/
+
+#navbar-top{
+    background-color: #F1F1F1;
+    width: 100%;
+}
+
+
+/*LEFT*/
+
+#navbar-top-l{
+    background-color: #F1F1F1;
+    width: 50%;
+    height: 10%;
+    float: left;
+    border-bottom: 1px solid #CCCCCC;
+}
+
+
+#logo{
+    width: 90px;
+    height: 33px;
+    position: relative;
+    top: 10;
+    left: 15;
+}
+
+#sbar{
+    position: relative;
+    left: 120px;
+    bottom: 30px;
+    width: 580px;
+    height: 30px;
+    border: none;
+    font-size: 16px;
+    border: 1px solid #DEDEDE;
+}
+
+#sbutton{
+    position: relative;
+    left: 115px;
+    bottom: 21px;
+    width: 60px;
+    height: 30px;
+    background-color: #498AF2;
+    border: none;
+}
+
+.f{
+    display: inline;
+    position: relative;
+}
+
+#magnifier{
+    position: relative;
+    left: 717;
+    bottom: 58;
+}
+
+#speach{
+    position: relative;
+    left: 640;
+    bottom: 58;
+    opacity: 0.6;
+}
+
+#speach:hover{
+    opacity: 5;
+}
+
+/*RIGHT*/
+
+#navbar-top-r{
+    background-color: #F1F1F1;
+    width: 50%;
+    height: 10%;
+    float: right;
+    border-bottom: 1px solid #DEDEDE;
+}
+
+#bell{
+    width: 28px;
+    height:23px;
+    opacity: 0.6;
+    position: relative;
+    top: 4px;
+}
+
+#sq{width: 17px;
+    height:17px;
+    opacity: 0.6;
+}
+
+#profile{
+    width: 40px;
+    height:37px;
+    position: relative;
+    top: 10px;
+}
+
+.h{
+    display: inline;
+    position: relative;
+    padding: 5;
+    left: 430;
+    font-size: 13px;
+    color: black;
+}
+
+#sq:hover{
+    opacity: 5;
+    }
+    
+#bell:hover{
+    opacity: 5;
+    }
+/*---------NAVBAR ---------------------*/
+
+/*GENERAL*/
+
+#navbar{
+    width: 100%;
+    display: block;
+}
+
+/*LEFT*/
+
+#navbar-l{
+    height: 55px;
+    float: left;
+    margin-left: 72px;
+}
+
+.list{
+    display: inline;
+    padding-left: 25px;
+    font-size: 13px;
+    color: #808080;   
+}
+
+.list:hover{
+    color:black;
+}
+
+#bar{
+    background-color: #dd4b39;
+    width: 40px;
+    height: 3px;
+    position: relative;
+    left: 60;
+}
+
+/*RIGHT*/
+
+#navbar-r{
+    height: 55px;
+    display: inline-block;
+    float: right;
+    margin-right: 30;
+    position: relative;
+    left: 740;
+    bottom: 60;
+}
+
+#man{
+    background-image:url(http://i1.wp.com/www.basicgrowth.com/wp-content/uploads/2015/05/12.jpg?fit=900%2C9999);
+    width:40px;
+    height:30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #EBEBEB;
+    border-radius: 5%;
+    border: 1px solid #CCCCCC;
+}
+
+#world{
+    background-image:url(http://i0.wp.com/www.basicgrowth.com/wp-content/uploads/2015/05/22.jpg?fit=900%2C9999);
+    width:40px;
+    height:30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #EBEBEB;
+    border: 1px solid #CCCCCC;
+    margin-left: -5px;
+    border-radius: 5%;
+}
+
+#settings{
+    background-image:url(http://i2.wp.com/www.basicgrowth.com/wp-content/uploads/2015/05/32.jpg?fit=900%2C9999);
+    width:70px;
+    height:30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #EBEBEB;
+    border: 1px solid #CCCCCC;
+    margin-left: 20px;
+    border-radius: 5%;
+}
+
+.list2{
+    display: inline;
+}
+    
+
+/*---------SEARCH ---------------------*/
+
+#search{
+    clear: both;
+    border-top: 1px solid #DEDEDE;
+}
+
+#results{
+    width: 65%;
+}
+
+.searchresults{
+    width: 530px;
+    height: auto;
+    clear: both;
+    padding-bottom: 20px;
+    margin-left: 135px;
+    font-size: 14px;
+}
+
+.title{
+    color: #1A0DAB;
+    font-size: 19px;
+}
+
+.title:hover{
+    text-decoration: underline;
+}
+
+
+.link{
+    color: #2F6621;
+}
+
+#seconds{ 
+    width: 530px;
+    height: auto;
+    clear: both;
+    padding-bottom: 20px;
+    margin-left: 135px;
+    font-size: 14px;
+    padding-top: 10px;
+}
+
+#table{
+    color: #1A0DAB;
+    font-size: 14px;
+    position: relative;
+    border-spacing: 10px;
+    left: -10px;
+    top: -20px;
+    border-collapse: separate;
+    border-bottom: 1px solid #DEDEDE;
+    width: 530px;
+}
+
+#tabletitle{
+    font-size: 18px;
+    color: #808080;
+}
+    
+
+td:hover{
+    text-decoration: underline;
+}
+
+#last{
+    border-bottom: 1px solid #DEDEDE;
+}
+
+/*---------FOOTER ---------------------*/
+
+#footer{
+    background-color: #F1F1F1;
+    position: absolute;
+    clear: both;
+    width: 100%;
+    height: 80px;
+    border-top: 1px solid #DEDEDE;
+}
+
+.sgrey{
+    
+</style>
+
+<div id="wrapper">
+
+<!-- TOP NAVBAR ------------------------------>
+
+    <div id="navbar-top">
+    
+        <div id="navbar-top-l">
+        
+        <a href="#"><img class="f" id="logo" src="https://www.google.be/images/srpr/logo11w.png"> </a>
+        <form class="f" action="search.php" method="GET" name="search" >
+    <input id="sbar" type= "text" value="  build this webpage"></form>
+    <input class="f" id="sbutton" type="button" name="search">
+    
+    <img id="magnifier" src="http://i0.wp.com/www.basicgrowth.com/wp-content/uploads/2015/06/2.jpg?fit=900%2C9999">
+    <img id="speach" src="http://i0.wp.com/www.basicgrowth.com/wp-content/uploads/2015/06/1.jpg?fit=900%2C9999">
+    
+    
+ </div>
+    
+        <div id="navbar-top-r">
+        
+        <div class="h"> <a href="#">+Simon</a></div>
+        <div class="h" ><img id="sq" src="http://i0.wp.com/www.basicgrowth.com/wp-content/uploads/2015/05/1.jpg?fit=900%2C9999"></div>
+        <div class="h"><img id="bell" src="http://i1.wp.com/www.basicgrowth.com/wp-content/uploads/2015/05/2.jpg?fit=900%2C9999"></div>
+    
+        <div class="h" ><img id="profile" src="http://i1.wp.com/www.basicgrowth.com/wp-content/uploads/2015/05/4.jpg?fit=900%2C9999"></div>
+        
+        </div>
+    </div>
+    
+<!-- NAVBAR ---------------------------------->
+    
+    <div id="navbar">
+    
+        <div id="navbar-l">
+            <ul>
+                <li class="list"><span style= "color: #DD4B39 ;font-weight: bold"> Web</span></li>
+                <li class="list">Images</li>
+                <li class="list">Videos</li>
+                <li class="list">News</li>
+                <li class="list">Maps</li>
+                <li class="list">More ?</li>
+                <li class="list">Search Tools</li>
+            </ul>
+            
+        <div id="bar"><bar>
+            
+        </div>
+
+    
+        <div id="navbar-r">
+        <ul>
+                <li class="list2"><input type="button" id="man"></li>
+                <li class="list2"><input type="button" id="world"></li>
+                <li class="list2"><input type="button" id="settings"></li>
+            </ul>
+        </div>
+    </div>
+    
+    
+<!-- SEARCH RESULTS -------------------------->
+    
+    <div id="search">
+        <div id="results">
+        
+        <div id="seconds" style="color: #808080"> About 4,690,000 results (0.25 seconds) </div> 
+        
+        <div class="searchresults"><a href="#"><span class= "title">With zero coding experience, artist building 180 webpages ...</span></a><br>
+<span class= "link">arstechnica.com/.../with-zero-coding-experience-artist-build...<a href="#">?</a></span>
+Ars Technica ?<br>
+Jul 26, 2013 - 117 days ago, having never done any programming in her life, Jennifer Dewalt built her first webpage. The next day, she built another, and she ...</div>
+        
+        <div class="searchresults"><a href="#"><span class= "title">Build Your Own Webpage | Codecademy</span></a><br>
+<span class= "link">www.codecademy.com/courses/web-beginner-en-LceTK<a href="#">?</a></span> Codecademy ?<br>
+Build Your Own Webpage. What you'll be making. Before we ask you to write a bunch of code, we think it's helpful for you to see exactly what you'll be making in ...</div>
+        
+        <div class="searchresults"><a href="#"><span class= "title">How I Built This Website - Phil's Old Radios</span></a><br>
+<span class= "link">antiqueradio.org/howto.htm<a href="#"> ?</a></span><br>
+You don't need an expensive computer to build a website. What you need is a machine that can connect to the Internet and do basic text editing and image ...</div>
+        
+        <div class="searchresults"><a href="#"><span class= "title">How Do We Know They Need This Webpage? | Inc.com</span></a><br>
+<span class= "link">www.inc.com/...build.../how-do-we-know-they-need-this-webpage.h...<a href="#"> ?</a></span>
+Inc. ?<br>
+Aug 2, 2013 - During a recent visit to HubSpot's headquarters, members of the Build team got to see the remnants of one of the inbound marketing firm's ...</div>
+        
+        <div class="searchresults"><a href="#"><span class= "title">BuiltWith Technology Lookup</span></a><br>
+<span class= "link">builtwith.com/<a href="#"> ?</a></span><br>
+Web technology information profiler tool. Find out what a website is built with.</div>
+
+<div class="searchresults"><a href="#"><span class= "title">How to Make a Website - Step-by-Step Guide for Beginners</span></a><br>
+<span class= "link">websitesetup.org/<a href="#"> ?</a></span><br>
+Learn how to make a website and set it up. This site contains different tutorials on how to build a website using WordPress, Joomla, Drupal & HTML.</div>
+        
+        <div class="searchresults"><a href="#"><span class= "title">How We Built This Website - Learning Historical Research</span></a><br>
+<span class= "link">www.williamcronon.net/researching/website.htm<a href="#"> ?</a></span><br>
+Mar 23, 2009 - How We Built This Website. William Cronon. Introduction. William Cronon (Photo by Rees Candee). Over the past several years, I've become ...</div>
+        
+        <div class="searchresults"><a href="#"><span class= "title">WIX.com: Free Website Builder | Create a Free Website</span></a><br>
+<span class= "link">www.wix.com/<a href="#"> ?</a></span>
+Wix.com ?<br>
+Customize with Wix' free website builder, no coding skills needed. Choose a design ... Every day we feature an amazing new website built with Wix. Want your ...</div>
+        
+        <div class="searchresults"><a href="#"><span class= "title">build this website - Google Search - kleopetrov.com</span></a><br>
+<span class= "link">kleopetrov.com/google/</span><br>
+Jul 26, 2013 - 117 days ago, having never done any programming in her life, Jennifer Dewalt built her first webpage. The next day, she built another, and she .</div>
+        
+        <div id="last" class="searchresults"><a href="#"><span class= "title">New Website Shows How Anyone Can Create a ... - Reuters</span></a><br>
+<span class= "link">www.reuters.com/article/.../idUSnHUGdl6D+71+ONE20131028
+Reuters</span><br>
+Oct 28, 2013 - Thanks for a new free website just launched, business owners and entrepreneurs can follow a simple step by step tutorial to build their own ...</div>
+
+<div class="searchresults">
+
+
+<p id="tabletitle">Searches related to build this webpage</p>
+<table id="table"> 
+    <tr>
+        <td> <strong>how to</strong> build a website</td>
+        <td> <strong>how to create</strong> a webpage</td>
+    </tr>
+    <tr>
+        <td><strong>how to build</strong> a webpage for free</td>
+        <td><strong>how to </strong>build a webpage with html </td>
+    </tr>
+    <tr>
+        <td>build a <strong>webpage</strong> google </td>
+        <td>build your own <strong>webpage</strong> </td>
+    </tr>
+    <tr>
+        <td><strong>how to build</strong> a web page for free </td>
+        <td><strong>how to build</strong> a webpage from scratch </td>
+    </tr>
+</table>
+
+<img id="closeenough"src="http://i1.wp.com/www.basicgrowth.com/wp-content/uploads/2015/06/google-search.jpg?fit=900%2C9999">
+
+        </div>
+        </div>
+        </div>
+    
+<!-- FOOTER (Outside Wrapper)----------------->
+    
+    <div id="footer">
+    <br><p class="list">Bruges, Belgium - From your Internet address - Use precise location - Learn more   </p>
+    
+<ul>
+    <li class="list">Help</li>
+    <li class="list">Send feedback</li>
+    <li class="list">Privacy </li>
+    <li class="list">Terms</li>
+    <li class="list">Use Google.be</li>
+    
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,182 @@
+/*---------------------*/
+/* STRUCTURE & GENERAL */
+/*---------------------*/
+@font-face {
+  font-family: "Bebas";
+  src: url("../fonts/BebasNeue.otf"); }
+html {
+  position: relative;
+  min-height: 100%; }
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: #333333; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Bebas", sans-serif; }
+
+body a {
+  text-decoration: none;
+  color: #14a940;
+  transition: all 0.19s ease-in-out; }
+  body a:hover {
+    text-decoration: none;
+    color: #14a940; }
+
+/*Clearfix*/
+.cf:after,
+.cf:before {
+  content: "";
+  display: table; }
+
+.cf:after {
+  clear: both; }
+
+.col-center {
+  margin: 0 auto;
+  float: none; }
+
+.button {
+  color: white;
+  display: inline-block;
+  padding: 7px 15px;
+  text-transform: uppercase;
+  background-color: #333333; }
+
+/*---------------------*/
+/*    HEADER & NAV     */
+/*---------------------*/
+.header img {
+  margin-bottom: 15px; }
+.header nav ul li {
+  color: white;
+  display: inline-block;
+  padding: 10px;
+  text-transform: uppercase;
+  background-color: #333333;
+  position: relative; }
+  .header nav ul li a {
+    color: #ffffff; }
+    .header nav ul li a:hover {
+      color: #14a940; }
+  .header nav ul li:after {
+    border-style: solid;
+    border-width: 0 0 10px 10px;
+    border-color: transparent transparent #0c6526 transparent;
+    content: "";
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    bottom: 0;
+    right: 0; }
+
+/*---------------------*/
+/* 		CONTENT  	   */
+/*---------------------*/
+.row:nth-child(2) {
+  padding-top: 20px;
+  background-image: url("../images/bg.png"); }
+
+.main-content {
+  padding: 0; }
+  .main-content .wrapper {
+    padding-right: 15px; }
+  .main-content article {
+    padding: 15px 15px 35px;
+    margin-bottom: 25px;
+    background-color: #fff;
+    font-size: 115%; }
+    .main-content article ul {
+      margin-bottom: 25px; }
+      .main-content article ul li {
+        font-size: 95%;
+        text-transform: uppercase;
+        padding: 3px 10px;
+        color: #04327b;
+        display: inline-block;
+        background-color: #dddddd; }
+    .main-content article p {
+      margin-bottom: 15px; }
+    .main-content article h1 {
+      text-transform: uppercase;
+      font-size: 275%;
+      margin-top: 0;
+      color: #0c6526; }
+      .main-content article h1 a {
+        color: #0c6526; }
+        .main-content article h1 a:hover {
+          color: #14a940; }
+    .main-content article img {
+      float: right; }
+    .main-content article .button:hover {
+      background-color: #0c6526;
+      color: white; }
+
+/*---------------------*/
+/* 		SIDE           */
+/*---------------------*/
+.sidebar {
+  padding: 0; }
+  .sidebar > div {
+    background-color: #ffffff;
+    margin-bottom: 25px;
+    border: 10px solid #ffffff; }
+  .sidebar h2 {
+    margin-top: 0;
+    font-size: 150%;
+    color: #ffffff;
+    background-color: #444444;
+    padding: 15px 10px;
+    position: relative; }
+    .sidebar h2:after {
+      border-style: solid;
+      border-width: 0 0 10px 10px;
+      border-color: transparent transparent #0c6526 transparent;
+      content: "";
+      position: absolute;
+      height: 10px;
+      width: 10px;
+      bottom: 0;
+      right: 0; }
+  .sidebar .search {
+    font-size: 120%;
+    height: 70px;
+    background-color: #ffffff; }
+    .sidebar .search input {
+      position: relative;
+      background-color: #f2f2f2;
+      padding-left: 10px;
+      border: 1px solid #ccc;
+      height: 100%;
+      width: 100%; }
+    .sidebar .search .search-icon {
+      position: absolute;
+      z-index: 10;
+      right: 20px;
+      top: 2.5%;
+      opacity: 0.5; }
+  .sidebar .book p {
+    font-size: 130%;
+    font-weight: bold; }
+  .sidebar .most-popular ul {
+    font-size: 130%;
+    padding-left: 15px; }
+    .sidebar .most-popular ul li {
+      margin-bottom: 10px;
+      list-style: initial;
+      display: list-item; }
+      .sidebar .most-popular ul li a {
+        color: #04327b; }
+        .sidebar .most-popular ul li a:hover {
+          color: #0646ac; }
+
+/*---------------------*/
+/* 		FOOTER 		   */
+/*---------------------*/
+
+/*# sourceMappingURL=style.css.map */

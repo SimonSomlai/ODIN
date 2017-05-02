@@ -1,0 +1,20 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: dinosaur-api_development
+
+test:
+  <<: *default
+  database: dinosaur-api_test
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  database: dtptp57qbrofq
+  username: vdmqwvkjhsbram
+  password: <%= ENV['DINOSAUR-API_DATABASE_PASSWORD'] %>

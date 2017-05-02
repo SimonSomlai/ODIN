@@ -1,0 +1,163 @@
+*{
+    font-family: Arial;
+}
+
+/* Icons CSS----------------- */
+
+#bell{
+    width: 28px;
+    height:23px;
+    position: relative;
+    top: 5;
+    opacity: 0.6;
+}
+
+#sign{
+    width: 25px;
+    height:20px;
+    position: relative;
+    top: 3;
+    opacity: 0.6;
+}
+
+#sq{width: 17px;
+    height:17px;
+    opacity: 0.6;
+    position: relative;
+    top: 2;
+}
+
+#profile{
+    width: 40px;
+    height:37px;
+    position: relative;
+    top: 12;
+}
+
+#bell:hover{
+    opacity: 5;
+}
+
+#sign:hover{
+    opacity: 5;
+}
+
+#sq:hover{
+    opacity: 5;
+}
+
+#mic:hover{
+    opacity: 5;
+}
+
+.h:hover{
+    text-decoration: underline;
+}
+
+.reco:hover{
+    box-shadow: 0 1px 8px grey;
+}
+
+.x{
+    position: relative;
+    bottom: 130px;
+    left: 127px;
+    opacity: 0;
+    
+}
+
+.y{
+    position: relative;
+    bottom: 138px;
+    left: 127px;
+    opacity: 0;
+}
+
+.x:hover{
+    opacity: 0;
+}
+
+.y:hover{
+    opacity: 0;
+}
+
+.reco:hover~.x{
+   opacity:1 ;
+}
+
+.reco:hover~.y{
+    opacity:1 ;
+}
+
+/* Body CSS----------------- */
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.h{
+    display: inline;
+    position: relative;
+    padding: 5px;
+    right: -5;
+    top: -13;
+    font-size: 13px;
+    color: black;
+}
+
+#header{
+    position: relative;
+    left: 995px;
+    top: 10px;
+}
+
+#logo{
+    margin: auto;
+    display: block;
+    top: 150px;
+    position: relative;
+    width: 270px;
+    height: 100px;
+}
+
+#sbar{
+    display: block;
+    margin: auto;
+    width: 670px;
+    height:36px; 
+    position: relative;
+    margin-top: 145px;
+    color: #BBBBBB;
+    font-size: 16px;
+    
+}
+
+#country{
+    position: absolute;
+    top: 256;
+    left: 760;
+    font-weight: bold;
+    color: grey;
+    font size: 16px;
+}
+
+#mic{
+    position: relative;
+    left: 975;
+    bottom: 48;
+    opacity: 0.6;
+}
+
+td{
+
+    height: 136px;
+    width: 160px;
+}
+
+table{
+    margin: auto;
+    position: relative;
+    top: 60;
+}
+

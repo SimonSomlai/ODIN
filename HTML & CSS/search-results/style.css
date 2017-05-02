@@ -1,0 +1,301 @@
+body, html{
+    height: 100%;
+}
+
+*{
+    font-family: Arial;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+/*--------- TOP NAVBAR--------------------- */
+/*GENERAL*/
+
+#navbar-top{
+    background-color: #F1F1F1;
+    width: 100%;
+}
+
+
+/*LEFT*/
+
+#navbar-top-l{
+    background-color: #F1F1F1;
+    width: 50%;
+    height: 10%;
+    float: left;
+    border-bottom: 1px solid #CCCCCC;
+}
+
+
+#logo{
+    width: 90px;
+    height: 33px;
+    position: relative;
+    top: 10;
+    left: 15;
+}
+
+#sbar{
+    position: relative;
+    left: 120px;
+    bottom: 30px;
+    width: 580px;
+    height: 30px;
+    border: none;
+    font-size: 16px;
+    border: 1px solid #DEDEDE;
+}
+
+#sbutton{
+    position: relative;
+    left: 115px;
+    bottom: 21px;
+    width: 60px;
+    height: 30px;
+    background-color: #498AF2;
+    border: none;
+}
+
+.f{
+    display: inline;
+    position: relative;
+}
+
+#magnifier{
+    position: relative;
+    left: 717;
+    bottom: 58;
+}
+
+#speach{
+    position: relative;
+    left: 640;
+    bottom: 58;
+    opacity: 0.6;
+}
+
+#speach:hover{
+    opacity: 5;
+}
+
+/*RIGHT*/
+
+#navbar-top-r{
+    background-color: #F1F1F1;
+    width: 50%;
+    height: 10%;
+    float: right;
+    border-bottom: 1px solid #DEDEDE;
+}
+
+#bell{
+    width: 28px;
+    height:23px;
+    opacity: 0.6;
+    position: relative;
+    top: 4px;
+}
+
+#sq{width: 17px;
+    height:17px;
+    opacity: 0.6;
+}
+
+#profile{
+    width: 40px;
+    height:37px;
+    position: relative;
+    top: 10px;
+}
+
+.h{
+    display: inline;
+    position: relative;
+    padding: 5;
+    left: 430;
+    font-size: 13px;
+    color: black;
+}
+
+#sq:hover{
+    opacity: 5;
+    }
+    
+#bell:hover{
+    opacity: 5;
+    }
+/*---------NAVBAR ---------------------*/
+
+/*GENERAL*/
+
+#navbar{
+    width: 100%;
+    display: block;
+}
+
+/*LEFT*/
+
+#navbar-l{
+    height: 55px;
+    float: left;
+    margin-left: 72px;
+}
+
+.list{
+    display: inline;
+    padding-left: 25px;
+    font-size: 13px;
+    color: #808080;   
+}
+
+.list:hover{
+    color:black;
+}
+
+#bar{
+    background-color: #dd4b39;
+    width: 40px;
+    height: 3px;
+    position: relative;
+    left: 60;
+}
+
+/*RIGHT*/
+
+#navbar-r{
+    height: 55px;
+    display: inline-block;
+    float: right;
+    margin-right: 30;
+    position: relative;
+    left: 740;
+    bottom: 60;
+}
+
+#man{
+    background-image:url(http://i1.wp.com/www.basicgrowth.com/wp-content/uploads/2015/05/12.jpg?fit=900%2C9999);
+    width:40px;
+    height:30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #EBEBEB;
+    border-radius: 5%;
+    border: 1px solid #CCCCCC;
+}
+
+#world{
+    background-image:url(http://i0.wp.com/www.basicgrowth.com/wp-content/uploads/2015/05/22.jpg?fit=900%2C9999);
+    width:40px;
+    height:30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #EBEBEB;
+    border: 1px solid #CCCCCC;
+    margin-left: -5px;
+    border-radius: 5%;
+}
+
+#settings{
+    background-image:url(http://i2.wp.com/www.basicgrowth.com/wp-content/uploads/2015/05/32.jpg?fit=900%2C9999);
+    width:70px;
+    height:30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #EBEBEB;
+    border: 1px solid #CCCCCC;
+    margin-left: 20px;
+    border-radius: 5%;
+}
+
+.list2{
+    display: inline;
+}
+    
+
+/*---------SEARCH ---------------------*/
+
+#search{
+    clear: both;
+    border-top: 1px solid #DEDEDE;
+}
+
+#results{
+    width: 65%;
+}
+
+.searchresults{
+    width: 530px;
+    height: auto;
+    clear: both;
+    padding-bottom: 20px;
+    margin-left: 135px;
+    font-size: 14px;
+}
+
+.title{
+    color: #1A0DAB;
+    font-size: 19px;
+}
+
+.title:hover{
+    text-decoration: underline;
+}
+
+
+.link{
+    color: #2F6621;
+}
+
+#seconds{ 
+    width: 530px;
+    height: auto;
+    clear: both;
+    padding-bottom: 20px;
+    margin-left: 135px;
+    font-size: 14px;
+    padding-top: 10px;
+}
+
+#table{
+    color: #1A0DAB;
+    font-size: 14px;
+    position: relative;
+    border-spacing: 10px;
+    left: -10px;
+    top: -20px;
+    border-collapse: separate;
+    border-bottom: 1px solid #DEDEDE;
+    width: 530px;
+}
+
+#tabletitle{
+    font-size: 18px;
+    color: #808080;
+}
+    
+
+td:hover{
+    text-decoration: underline;
+}
+
+#last{
+    border-bottom: 1px solid #DEDEDE;
+}
+
+/*---------FOOTER ---------------------*/
+
+#footer{
+    background-color: #F1F1F1;
+    position: absolute;
+    clear: both;
+    width: 100%;
+    height: 80px;
+    border-top: 1px solid #DEDEDE;
+}
+
+.sgrey{
+    

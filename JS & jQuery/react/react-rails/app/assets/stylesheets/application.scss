@@ -1,0 +1,22 @@
+// This main CSS file contains all style specifications for the rails-react app
+// There's a separate styling file for every database object that's
+// being displayed (product.scss, post.scss, ...). The CSS in each file is structured
+// by page-function (index, show,..) whilst the rules are ordered by location in the DOM (top to bottom)
+// All properties are sorted using CSSComb and classes/id's are defined with hypens (my-cool-class). I use % for text relative
+// To the html & px for everything else.
+// Ex;
+
+// post.scss
+// - index-page (all posts)
+//   {DOM ordered & property sorted css}
+// - show-page
+//   {DOM ordered & property sorted css}
+
+// For information about the source code,
+// Please contact me at info@truetech.be
+
+// Base styling
+@import "base/reset.css";
+// General Styling (headers, footers & nav)
+@import "general/style.scss";
+// Model styling

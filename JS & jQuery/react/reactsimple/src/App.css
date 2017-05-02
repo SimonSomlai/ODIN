@@ -1,0 +1,53 @@
+/*---------------------*/
+/* STRUCTURE & GENERAL */
+/*---------------------*/
+html {
+  position: relative;
+  min-height: 100%; }
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: $primary; }
+
+body a {
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+  color: #04327b; }
+  body a:hover {
+    text-decoration: none;
+    color: #04327b; }
+
+/*Clearfix*/
+.cf:after,
+.cf:before {
+  content: "";
+  display: table; }
+
+.cf:after {
+  clear: both; }
+
+.col-center {
+  margin: 0 auto;
+  float: none; }
+
+/*---------------------*/
+/* 		CONTENT  	   */
+/*---------------------*/
+.board {
+  display: flex;
+  width: 600px;
+  height: 600px;
+  flex-direction: row;
+  flex-wrap: wrap; }
+
+.square {
+  cursor: pointer;
+  height: 200px;
+  width: 200px;
+  box-sizing: border-box;
+  border: 1px solid #000;
+  font-size: 400%;
+  text-align: center;
+  line-height: 200px; }
+
+/*# sourceMappingURL=style.css.map */

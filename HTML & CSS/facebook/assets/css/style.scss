@@ -1,0 +1,719 @@
+@import "mixins";
+@import "base"; // This main CSS file contains all style specifications for the <facebook html page>
+// There's a separate styling file for every database object that's
+// being displayed (product.scss, post.scss, ...). The CSS in each file is structured
+// by page-function (index, show,..) whilst the rules are ordered by location in the DOM (top to bottom)
+// All properties are sorted using CSSComb and classes/id's are defined with hypens (my-cool-class).
+// I use % and px as units for measurement.
+// Ex;
+// post.scss
+// - index-page (all posts)
+//   {DOM ordered & property sorted css}
+// - show-page
+//   {DOM ordered & property sorted css}
+// For information about the source code,
+// Please contact me at info@truetech.be
+// Color Palette
+$white: #fff;
+$text: #000;
+$primary: #3b5998;
+$secondary: #e02d28;
+/*---------------------*/
+/* STRUCTURE & GENERAL */
+/*---------------------*/
+html {
+  position: relative;
+  min-height: 100%;
+  font-size: 16px;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: $white;
+}
+
+body a {
+  text-decoration: none;
+  color: $text;
+}
+/*Clearfix*/
+.cf:after,
+.cf:before {
+  display: table;
+  content: "";
+}
+
+.cf:after {
+  clear: both;
+}
+
+.row {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  padding-right: 10px;
+}
+/*---------------------*/
+/*    HEADER & NAV     */
+/*---------------------*/
+// Navbar
+
+header {
+  height: 45px;
+
+  nav {
+    height: 100%;
+    background-color: $primary;
+
+    .left-menu {
+      height: 100%;
+      padding-left: 60px;
+
+      .logo {
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        margin-top: 13px;
+        background-image: url("../images/sprite.png");
+        background-position: 0 2%;
+        background-size: initial;
+      }
+
+      input {
+        position: relative;
+        top: -19%;
+        display: inline-block;
+        width: 400px;
+        margin-bottom: 10px;
+        padding-left: 10px;
+        border: 0;
+        @include border-left-radius(2px);
+      }
+
+      button {
+        position: relative;
+        top: -19%;
+        left: -1%;
+        width: 40px;
+        height: 22px;
+        padding: 0;
+        border: 0;
+        background-color: white;
+        @include border-right-radius(2px);
+
+        img {
+          width: 14px;
+        }
+      }
+    }
+
+    .right-menu {
+      height: 100%;
+      padding-left: 65px;
+
+      ul {
+        display: inline-block;
+        min-height: 100%;
+        margin: 0;
+        padding-top: 10px;
+        vertical-align: top;
+
+        li {
+          display: inline-block;
+          height: 25px;
+          margin-right: 15px;
+        }
+      }
+
+      ul.list1 {
+        margin-right: 30px;
+
+        .list-item1 {
+          padding-left: 30px;
+          background-image: url("../images/facebook14");
+          background-repeat: no-repeat;
+          background-size: 25px;
+        }
+      }
+
+      ul.list2 {
+        li {
+          height: 20px;
+          margin-right: 5px;
+          padding-left: 25px;
+          opacity: 0.7;
+          background-image: url("../images/sprite.png");
+        }
+
+        .list-item1 {
+          background-position: 0 108%;
+        }
+
+        .list-item2 {
+          background-position: 0 38.7%;
+        }
+
+        .list-item3 {
+          margin-right: 35px;
+          background-position: 0 12.1%;
+        }
+
+        .list-item4 {
+          background-position: 0 55%;
+        }
+
+        .list-item5 {
+          height: 15px;
+          background-position: 0 -14.2%;
+        }
+      }
+    }
+  }
+}
+/*---------------------*/
+/* 		CONTENT  	   */
+/*---------------------*/
+.main {
+  max-width: 100%;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding-top: 45px;
+  padding-left: 60px;
+  color: $text;
+  background-color: #e9ebee;
+
+  ul {
+    margin-bottom: 20px;
+
+    li {
+      height: 20px;
+      margin-bottom: 5px;
+      padding-left: 27px;
+      transition: all 0.2s ease-in-out;
+      border-color: #ccc;
+    }
+  }
+
+  h3 {
+    font-size: 80%;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $primary;
+  }
+}
+
+main > div {
+  margin-right: 10px;
+}
+// ------------------------------ 1ST COLLUMN ------------------------------------
+// Sidenav
+
+.sidenav {
+  padding: 15px 0 0;
+
+  span {
+    float: right;
+    font-size: 75%;
+    text-align: right;
+    opacity: 0.3;
+  }
+
+  li.active {
+    font-weight: bold;
+    border: 1px solid #ccc;
+    background-color: lighten($primary,75%);
+  }
+
+  li:hover {
+    font-weight: bold;
+    border: 1px solid #ccc;
+    background-color: lighten($primary,75%);
+  }
+
+  .list1 {
+    .list-item1 {
+      margin-bottom: 10px;
+      background-image: url("../images/facebook14");
+      background-repeat: no-repeat;
+      background-size: 20px;
+    }
+
+    .list-item2,
+    .list-item3,
+    .list-item4 {
+      background-image: url("../images/sprite2.png");
+      background-repeat: no-repeat;
+      background-position: 1% 38.9%;
+      background-size: 35px;
+    }
+
+    .list-item3,
+    .list-item4 {
+      background-position: 1% 17.32%;
+    }
+  }
+
+  .list2 {
+    .list-item1,
+    .list-item2 {
+      background-image: url("../images/facebook9");
+      background-repeat: no-repeat;
+      background-size: 20px;
+    }
+
+    .list-item2 {
+      background-image: url("../images/facebook6");
+    }
+
+    .list-item3,
+    .list-item4 {
+      background-image: url("../images/sprite2.png");
+      background-repeat: no-repeat;
+      background-position: 0 91.4%;
+      background-size: 35px;
+    }
+
+    .list-item4 {
+      height: 22px;
+      background-image: url("../images/sprite2.png");
+      background-position: 1% 58.3%;
+      background-size: 37px;
+    }
+  }
+
+  .list3 {
+    li[class^="list-item"] {
+      background-image: url("../images/sprite2.png");
+      background-repeat: no-repeat;
+      background-position: 1% 24.2%;
+      background-size: 35px;
+    }
+
+    li.list-item2 {
+      background-position: 1% 44.7%;
+    }
+
+    li.list-item3 {
+      background-position: 1% 33.3%;
+    }
+
+    li.list-item4 {
+      background-position: 1% 40.2%;
+    }
+
+    li.list-item5 {
+      background-position: 1% 51.5%;
+    }
+
+    li.list-item6 {
+      color: $primary;
+      background-position: 1% 3.5%;
+    }
+  }
+
+  .list4 {
+    li {
+      display: inline;
+      margin: 0;
+      padding: 0;
+      color: $primary;
+    }
+  }
+}
+// ------------------------------ 2ND COLLUMN ------------------------------------
+// Status feed
+
+.status-feed {
+  margin-top: 10px;
+  padding: 0;
+
+  .wrapper-inner {
+    border: 1px solid #ccc;
+  }
+
+  ul {
+    margin: 0;
+    padding: 5px;
+
+    li {
+      display: inline-block;
+    }
+  }
+
+  .status-header {
+    border-bottom: 1px solid #ccc;
+    background-color: #e8e8e8;
+
+    li {
+      margin: 0;
+      padding: 0 5px;
+      font-size: 90%;
+      font-weight: bold;
+      color: lighten($text,20%);
+      color: $primary;
+
+      i {
+        color: $text;
+      }
+    }
+
+    li:first-child:after {
+      position: relative;
+      left: 8px;
+      content: "|";
+      opacity: 0.5;
+    }
+  }
+
+  .status-body {
+    position: relative;
+    width: 100%;
+    height: 70px;
+
+    .status-image {
+      position: absolute;
+      z-index: 10;
+      top: 17%;
+      left: 5px;
+    }
+
+    form {
+      height: 100%;
+    }
+
+    input {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      padding-left: 55px;
+      border: none;
+    }
+
+    &:after {
+      position: absolute;
+      left: 18px;
+      width: 90%;
+      height: 1px;
+      content: "";
+      background: rgba(128, 128, 128, .21);
+    }
+  }
+
+  .status-footer {
+    padding-top: 10px;
+    background-color: #fff;
+
+    li {
+      background-image: url("../images/sprite2.png") !important;
+      background-repeat: no-repeat;
+      background-position: 1% 24.2%;
+      background-size: 35px;
+    }
+
+    .list-item1 {
+      background-position: 1% 11.6%;
+    }
+
+    .list-item2 {
+      background-position: 1% 5.9%;
+    }
+
+    .list-item3 {
+      opacity: 1;
+      color: transparent;
+      background-image: none;
+      background-position: 1% 8.2%;
+    }
+
+    .bg {
+      position: relative;
+      top: -3px;
+      display: inline-block;
+      width: auto;
+      height: 30px;
+      padding: 5px 10px;
+      vertical-align: middle;
+      background-color: rgba(204,204,204,.28);
+      @include border-left-radius(100px);
+      @include border-right-radius(100px);
+    }
+  }
+}
+// ------------------------------ 3RD COLLUMN ------------------------------------
+// Overview
+
+.overview {
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+
+  .btn.fb-btn {
+    padding: 5px;
+    font-weight: bold;
+    color: white;
+    background-color: $primary;
+  }
+
+  .title {
+    font-weight: bold;
+    color: lighten($text, 65%);
+  }
+
+  .first.title {
+    position: relative;
+  }
+
+  .first.title:after {
+    position: absolute;
+    top: 25px;
+    left: 0;
+    width: 95%;
+    height: 1px;
+    content: "";
+    background: rgba(128, 128, 128, .21);
+  }
+
+  p.logo {
+    position: relative;
+    height: 35px;
+    padding-top: 2.5%;
+    padding-left: 35px;
+    font-weight: bold;
+    color: $primary;
+    background-image: url("../images/facebook9");
+    background-repeat: no-repeat;
+    background-size: 28px;
+
+    &:after {
+      position: absolute;
+      top: 40px;
+      left: 0;
+      width: 95%;
+      height: 1px;
+      content: "";
+      background: rgba(128, 128, 128, .21);
+    }
+  }
+
+  .ad {
+    position: relative;
+    margin-bottom: 5px;
+    padding-bottom: 15px;
+
+    .btn,
+    p:nth-child(3) {
+      margin-left: 68px;
+    }
+
+    img {
+      float: left;
+      height: 60px;
+      padding-top: 5px;
+      vertical-align: text-top;
+    }
+
+    &:after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 95%;
+      height: 1px;
+      content: "";
+      background: rgba(128, 128, 128, .21);
+    }
+  }
+
+  .engagement {
+    position: relative;
+    margin-bottom: 5px;
+
+    div {
+      position: relative;
+      display: inline-block;
+      width: 49%;
+      height: 60px;
+      margin: 0 auto;
+      text-align: center;
+      color: $primary;
+
+      &:nth-child(2):after {
+        position: absolute;
+        top: 0;
+        right: 4px;
+        width: 1px;
+        height: 70%;
+        content: "";
+        background-color: #ccc;
+      }
+
+      span {
+        display: block;
+        font-size: 135%;
+        color: $text;
+      }
+    }
+
+    &:after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 95%;
+      height: 1px;
+      content: "";
+      background: rgba(128, 128, 128, .21);
+    }
+  }
+
+  .messages {
+    .btn {
+      margin-bottom: 5px;
+      margin-left: 30px;
+    }
+
+    .more,
+    p:not(:first-child) {
+      padding-left: 30px;
+      font-weight: bold;
+      color: $primary;
+      background-image: url("../images/sprite.png");
+      background-repeat: no-repeat;
+      background-position: 1% 38.5%;
+    }
+
+    .more {
+      font-weight: normal;
+      background-position: 1% 87.5%;
+    }
+  }
+}
+// ------------------------------ 4TH COLLUMN ------------------------------------
+// Chat
+
+.chat {
+  position: relative;
+  padding: 7px;
+  border: 1px solid #ccc;
+  padding-bottom: 15px;
+
+  ul {
+    h3 {
+      color: lighten($text,35%);
+    }
+
+    li {
+      height: 30px;
+      line-height: 30px;
+      font-size: 85%;
+      padding-left: 35px;
+      background-image: url("../images/facebook1");
+      background-repeat: no-repeat;
+      background-size: 30px;
+      position: relative;
+
+      &.list-item2 {
+        background-image: url("../images/facebook2");
+      }
+
+      &.list-item4 {
+        background-image: url("../images/facebook4");
+      }
+
+      &.list-item5 {
+        background-image: url("../images/facebook5");
+      }
+
+      &.list-item8 {
+        background-image: url("../images/facebook8");
+      }
+
+      &.list-item10 {
+        background-image: url("../images/facebook10");
+      }
+
+      &.list-item3 {
+        background-image: url("../images/facebook16");
+      }
+
+      &.list-item6 {
+        background-image: url("../images/facebook13");
+      }
+
+      &.list-item7 {
+        background-image: url("../images/facebook12");
+      }
+
+      &.list-item9 {
+        background-image: url("../images/facebook11");
+      }
+
+      &.list-item11 {
+        background-image: url("../images/facebook15");
+      }
+
+      &.list-item12 {
+        background-image: url("../images/facebook17");
+      }
+
+      &.list-item13 {
+        background-image: url("../images/facebook18");
+      }
+
+      span:after {
+        right: 0;
+        top: 37%;
+        z-index: 10;
+        position: absolute;
+        content: "";
+        @include border-radius(100%);
+        background-color: green;
+        width: 5px;
+        height: 5px;
+      }
+    }
+  }
+
+  form{
+    input {
+      z-index: -99999;
+      padding-left: 20px;
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      width: 100%;
+      border: 1px solid #ccc;
+    }
+    &:before {
+      right: 10px;
+      z-index: 9999;
+      width: 15px;
+      background-position: 10% 42.7%;
+      opacity: 0.3;
+      height: 15px;
+      content: "";
+      background-image: url("https://www.facebook.com/rsrc.php/v3/y1/r/cRMhZeocz81.png");
+      position: absolute;
+    }
+
+    &:after {
+      z-index: 9999;
+      width: 15px;
+      background-position: 10% -12.66%;
+      height: 15px;
+      content: "";
+      background-image: url("https://www.facebook.com/rsrc.php/v3/y1/r/cRMhZeocz81.png");
+      position: absolute;
+    }
+
+  }
+
+}
+/*---------------------*/
+/* 		FOOTER 		   */
+/*---------------------*/
