@@ -3,7 +3,7 @@ import ReactDOM from "react-dom"
 import Dispatcher from "../../dispatcher/AppDispatcher"
 import DinosaurActions from "../../actions/DinosaurActions"
 import DinosaurStore from "../../stores/DinosaurStore"
-import {capitalizeFirstLetter} from "../../utils/utils"
+import helper from "../../utils/utils"
 
 class DinosaurDetail extends Component {
   constructor(props) {
@@ -44,13 +44,13 @@ class DinosaurDetail extends Component {
   }
 
   updateDinosaur(){
-    var formFields = this.refs, isEditing = this.state.isEditing; // Grab the refs from the fields & editing state
+    var formFields = this.refs, isEditing = this.state.isEditing; // Grab the input from the formfields & current editing state
     for(var prop in formFields){
-      this.state[prop] = formFields[prop].value; // Change the state fields
+      this.state[prop] = formFields[prop].value; // Change the state fields with new input values
     }
     var newDinosaur = this.state; // Make a copy of state
-    delete newDinosaur.isEditing; // Delete the isEditing key (shouldn't be changed)
-    this.state.isEditing = !isEditing // Set editing to false
+    delete newDinosaur.isEditing; // Delete the isEditing key (shouldn't be passed to the API)
+    this.state.isEditing = !isEditing // Set editing state to false
     DinosaurActions.updateDinosaur(this.state.id,newDinosaur); // Trigger action, which triggers dispatcher, which updates store, which broadcasts event
     this.setState(this.state);
   }
@@ -77,8 +77,8 @@ class DinosaurDetail extends Component {
         </div>)
     } else {
       return(<div className="card-block">
-          <h4 className="card-title"><strong>{capitalizeFirstLetter(this.state.name)}</strong></h4>
-          <p className="card-text"><strong>Type: </strong> {capitalizeFirstLetter(this.state.dinosaur_type)}</p>
+          <h4 className="card-title"><strong>{helper.capitalizeFirstLetter(this.state.name)}</strong></h4>
+          <p className="card-text"><strong>Type: </strong> {helper.capitalizeFirstLetter(this.state.dinosaur_type)}</p>
           <p className="card-text"><strong>Weight: </strong> {this.state.weight} kg</p>
           <p className="card-text"><strong>Height: </strong> {this.state.height} meters</p>
           <a onClick={() => this.toggleEditing()} className="btn btn-primary">Edit</a>

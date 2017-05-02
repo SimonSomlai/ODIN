@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import DinosaurStore from "../../stores/DinosaurStore";
 import DinosaurActions from "../../actions/DinosaurActions";
 
+
 class DinosaurForm extends Component{
   constructor(props){
     super(props);
@@ -15,6 +16,7 @@ class DinosaurForm extends Component{
     }
   }
 
+  // Update the state on typing
   updateInput(e){
     console.log(e.target.name, " = ", e.target.value);
     this.setState({[e.target.name]: e.target.value});
@@ -23,6 +25,7 @@ class DinosaurForm extends Component{
   handleSubmit(e){
     e.preventDefault();
     var formFields = this.refs
+    // Clear fields with loop
     for(var prop in formFields){
       formFields[prop].value = ""
     }

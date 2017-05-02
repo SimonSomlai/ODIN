@@ -16,15 +16,16 @@ class DinosaurList extends Component {
   componentWillMount(){
   // Add a listener to the dinosaurstore, so when it changes handledata can be fired which eventually re-renders the component
    DinosaurStore.addChangeListener(this.handleDinosaurData.bind(this));
-   DinosaurActions.getDinosaurData()
+   DinosaurActions.getDinosaurData() // Get data from store
   }
 
   componentWillUnmount(){
+    // Remove the listener from the component.
     DinosaurStore.removeChangeListener(this.handleDinosaurData.bind(this));
   }
 
   getDinosaurData(){
-    DinosaurActions.getDinosaurData();
+    DinosaurActions.getDinosaurData(); // Get data from store
   }
 
   handleDinosaurData(){
