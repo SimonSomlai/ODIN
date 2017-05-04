@@ -8,7 +8,7 @@ class Template extends Component {
       <div>
         <NavbarTop/>
         <div className="main">
-          {React.cloneElement(props.children)}
+          {React.cloneElement(this.props.children)}
         </div>
       </div>
     )
