@@ -3,7 +3,8 @@ import ReactDOM from "react-dom"
 import {PageHeader} from 'react-bootstrap';
 import Movie from "../movies/movie.js"
 import MovieStore from "../../stores/MovieStore.js"
-import Gmap from "../gmap.js"
+import MovieActions from "../../actions/MovieActions.js"
+
 
 class Home extends Component {
   constructor(props) {
@@ -11,6 +12,25 @@ class Home extends Component {
     this.state = {
       movies: MovieStore.getMovies()
     }
+  }
+
+  componentWillMount(){
+  // Add a listener to the store, so when it changes handle store change can be fired which eventually re-renders the component
+   MovieStore.addChangeListener(this.handleStoreChange.bind(this));
+  }
+
+  componentWillUnmount(){
+    // Remove the listener from the component.
+    MovieStore.removeChangeListener(this.handleStoreChange.bind(this));
+  }
+
+  getMovies(){
+    MovieActions.getMovies(); // Get data from store
+  }
+
+  handleStoreChange(){
+    var data = MovieStore.getMovies();
+    this.setState({movies: data});
   }
 
   renderMovies() {
@@ -26,24 +46,9 @@ class Home extends Component {
       <section id="content">
         <div className="content-wrap">
           <div className="container clearfix">
-            <ul id="portfolio-filter" className="portfolio-filter clearfix" data-container="#portfolio">
-              <li className="activeFilter">
-                <a href="#" data-filter="*">Show All</a>
-              </li>
-              <li>
-                <a href="#" data-filter=".pf-icons">Icons</a>
-              </li>
-            </ul>
-            <div id="portfolio-shuffle" className="portfolio-shuffle" data-container="#portfolio">
-              <i className="icon-random"/>
-            </div>
-            <div className="clear"/>
-            <div id="portfolio" className="portfolio grid-container portfolio-3 portfolio-masonry clearfix">
-              {this.renderMovies()}
-            </div>
+            {this.renderMovies()}
           </div>
         </div>
-        <Gmap lat={-34.397} lng={150.644}/>
       </section>
     )
   }

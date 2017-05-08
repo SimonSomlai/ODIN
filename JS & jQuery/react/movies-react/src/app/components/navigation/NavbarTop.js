@@ -18,7 +18,7 @@ class NavbarTop extends Component {
                   <Link to={"/"}>Home</Link>
                 </li>
                 <li className>
-                  <Link to={"/"}>Add Movie</Link>
+                  <Link to={"/movie/new"}>Add Movie</Link>
                 </li>
               </ul>
             </nav>

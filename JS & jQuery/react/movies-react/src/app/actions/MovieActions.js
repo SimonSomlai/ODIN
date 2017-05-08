@@ -4,13 +4,9 @@ import MovieApi from "../services/MovieApi"
 
 // Define action methods
 let MovieActions = {
-  getMovieData: () => {
+  getMovies: () => {
     console.log("trigger action");
-    MovieApi.getMovie(function(result){
-      AppDispatcher.handleAction({actionType: AppConstants.MOVIE_LOADED,data: result });
-    }, function(err){
-      console.log(err);
-    });
+      AppDispatcher.handleAction({actionType: AppConstants.GET_MOVIES,data: {} });
   },
 
   addMovie: (movie) => {
@@ -18,9 +14,9 @@ let MovieActions = {
       AppDispatcher.handleAction({actionType: AppConstants.CREATE_MOVIE,data: movie });
   },
 
-  updateMovie: (id, newMovie) => {
+  updateMovie: (newMovie) => {
     console.log("trigger update action");
-      AppDispatcher.handleAction({actionType: AppConstants.UPDATE_MOVIE, data: {id: id, newMovie: newMovie}});
+      AppDispatcher.handleAction({actionType: AppConstants.UPDATE_MOVIE, data: {movie: newMovie}});
   },
 
   deleteMovie: (id) => {

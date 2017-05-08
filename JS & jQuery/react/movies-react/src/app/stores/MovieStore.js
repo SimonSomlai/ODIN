@@ -38,10 +38,27 @@ var MovieStore = _.extend({}, EventEmitter.prototype, {
   getMovies: function() {
     return this.movies;
   },
+  updateMovie: function(newMovie){
+    console.log('trigger update movie with id:', newMovie.id );
+    var movie = this.findMovie(newMovie.id)
+    console.log('Found movie with name ', movie.name );
+    var index = this.movies.findIndex((oldMovie) => oldMovie.id === newMovie.id)
+    console.log('movie has index in array of', index);
+    this.movies[index] = newMovie
+    console.log('changing movie', );
+    console.log(this.getMovies());
+  },
   addMovie: function(movie) {
     console.log("Adding new movie to the store!", movie);
-    movie["id"] = this.getMovieData().length + 1;
+    movie["id"] = this.getMovies().length + 1;
     this.movies.push(movie)
+  },
+  deleteMovie: function(id){
+    var movie = this.findMovie(id)
+    console.log('Found movie with name ', movie.name );
+    var index = this.movies.findIndex((movie) => movie.id === id)
+    this.movies.splice(index, 1)
+    console.log('this.state', this.getMovies());
   },
   addChangeListener: function(callback) {
     this.on(CHANGE_EVENT, callback)
@@ -57,9 +74,24 @@ var MovieStore = _.extend({}, EventEmitter.prototype, {
 AppDispatcher.register(function(data) {
   console.log("hitting store with ", data, data.action);
   switch (data.action.actionType) {
+    case AppConstants.GET_MOVIES:
+    console.log("getting all movies from the store!");
+      MovieStore.getMovies();
+      MovieStore.emitChange();
+      break;
     case AppConstants.CREATE_MOVIE:
     console.log("adding movie to store!");
       MovieStore.addMovie(data.action.data);
+      MovieStore.emitChange();
+      break;
+    case AppConstants.UPDATE_MOVIE:
+    console.log("updating existing movie in store!");
+      MovieStore.updateMovie(data.action.data.movie);
+      MovieStore.emitChange();
+      break;
+    case AppConstants.DELETE_MOVIE:
+      console.log("Deleting movie from store!");
+      MovieStore.deleteMovie(data.action.data);
       MovieStore.emitChange();
       break;
     default:

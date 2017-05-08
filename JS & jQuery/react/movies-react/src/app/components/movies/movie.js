@@ -1,50 +1,38 @@
 import React, {Component} from "react"
 import ReactDOM from "react-dom"
 import {Link} from "react-router"
+import MovieActions from "../../actions/MovieActions.js"
 
 class Movie extends Component {
+  deleteMovie(id){
+    MovieActions.deleteMovie(id)
+  }
+
   render() {
-    const {id, name, actors, description, director, genre, images, release_date} = this.props.movie
+    const {
+      id,
+      name,
+      actors,
+      description,
+      director,
+      genre,
+      images,
+      release_date
+    } = this.props.movie
+    console.log('this.props.movie', this.props.movie);
+
     return (
-      <article className={"portfolio-item " + genre.replace(",", " ")}>
-        <div className="portfolio-image">
-          <div className="fslider" data-arrows="false" data-speed={400} data-pause={4000}>
-            <div className="flexslider">
-              <div className="slider-wrap">
-                <div className="slide">
-                  <a href="portfolio-single-gallery.html">
-                  <img src={images[0]} alt={name}/>
-                  </a>
-                </div>
-                <div className="slide">
-                  <a href="portfolio-single-gallery.html">
-                  <img src={images[1]} alt={name}/>
-                  </a>
-                </div>
-                <div className="slide">
-                  <a href="portfolio-single-gallery.html">
-                  <img src={images[2]} alt={name}/>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="portfolio-overlay" data-lightbox="gallery">
-            <a href={images[0]} className="left-icon" data-lightbox="gallery-item"><i className="icon-line-stack-2"/></a>
-            <a href={images[1]} className="left-icon" data-lightbox="gallery-item"><i className="icon-line-stack-2"/></a>
-            <a href={images[2]} className="hidden" data-lightbox="gallery-item"/>
-            <Link className="right-icon" to={"/movies/" + id}><i className="icon-line-ellipsis"/></Link>
+      <div className="col-md-4">
+        <div className="card" >
+          <img className="card-img-top" src={images[0]} alt="Card image cap"/>
+          <div className="card-block">
+            <h4 className="card-title">{name}</h4>
+            <p className="card-text">{description}</p>
+            <Link className="button button-3d button-inline button-black" to={"movies/" + id}>See Details</Link>
+            <button onClick={() => this.deleteMovie(id)} className="button button-3d button-inline button-red" id="template-contactform-submit" name="template-contactform-submit" value="submit">Delete</button>
           </div>
         </div>
-        <div className="portfolio-desc">
-          <h3>
-            <Link to={"/movies/" + id}>{name}</Link>
-          </h3>
-          <span>
-            {genre.replace(",", " ")}
-          </span>
-        </div>
-      </article>
+      </div>
     )
   }
 }

@@ -4799,7 +4799,7 @@ body.device-touch.device-xxs .portfolio-notitle .portfolio-overlay { display: no
 .portfolio-meta li:first-child { margin-top: 0; }
 
 .portfolio-meta li span {
-	display: inline-block;
+	display: inline;
 	width: 150px;
 	font-weight: bold;
 	color: #333;
@@ -13524,4 +13524,3 @@ body:not(.no-transition) #wrapper,
 	margin:0!important;
 	padding:0!important
 }
-
