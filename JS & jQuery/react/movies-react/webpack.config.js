@@ -9,22 +9,16 @@ module.exports = {
     browser: 'default'
   },
   entry: {
-    bundle: ['webpack-dev-server/client?http://localhost:3000', 'webpack/hot/only-dev-server', './src/index'],
-  vendor: ['./src/assets/scripts/plugins.js', './src/assets/scripts/functions.js']
-  },
+    bundle: ['webpack-dev-server/client?http://localhost:3000', 'webpack/hot/only-dev-server', './src/index']
+    },
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: '[name].js',
+    filename: 'bundle.js',
     publicPath: '/static/'
   },
   plugins: [
     new webpack.ProvidePlugin({$: "jquery", jQuery: "jquery", "window.jQuery": "jquery"}),
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.optimize.CommonsChunkPlugin({
-            name: "vendor",
-            filename: 'vendor.js',
-            Infinity
-        })
   ],
   module: {
     loaders: [
@@ -40,9 +34,9 @@ module.exports = {
       }, {
         test: /\.(woff2?|ttf|eot|svg)$/,
         loaders: ['url?limit=10000']
-      }, {
+      },  {
         test: /\.(jpe?g|png|gif|svg)$/i,
-        loaders: ['file?hash=sha512&digest=hex&name=[hash].[ext]', 'image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false']
+        loaders: ['file?hash=sha512&digest=hex&name=[hash].[ext]', 'image-webpack?bypassOnDebug&progressive=true&optimizationLevel=4&interlaced=false']
       }
     ],
     postcss: [autoprefixer({browsers: ['last 2 versions']})]

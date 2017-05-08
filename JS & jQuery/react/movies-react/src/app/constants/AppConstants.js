@@ -1,7 +1,7 @@
-const keyMirror = require('keymirror');
-
 // Define action constants
-module.exports = keyMirror({
-  KEY: null,
-  KEY: null
-});
+module.exports = {
+  MOVIE_LOADED: "MOVIE_LOADED",
+  CREATE_MOVIE: "CREATE_MOVIE",
+  UPDATE_MOVIE: "UPDATE_MOVIE",
+  DELETE_MOVIE: "DELETE_MOVIE"
+};
