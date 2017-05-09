@@ -4,8 +4,11 @@
   "description": "REST api for movies-react",
   "main": "index.js",
   "scripts": {
+    "start": "node app.js",
+    "build": "react-scripts build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "homepage": "https://node-movies-api.herokuapp.com/",
   "dependencies": {
     "body-parser": "*",
     "express": "^4.15.2",
@@ -13,5 +16,8 @@
     "node-restful": "^0.2.6"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "react-scripts": "^0.9.5"
+  }
 }
