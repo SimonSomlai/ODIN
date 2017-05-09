@@ -10,13 +10,27 @@ class Home extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      movies: MovieStore.getMovies()
+      movies: MovieStore.getAllMovies()
     }
   }
+
+  // Helper Functions
+
+  getAllMovies(){
+    MovieActions.getAllMovies(); // Get data from store
+  }
+
+  handleStoreChange(){
+    var data = MovieStore.getAllMovies();
+    this.setState({movies: data});
+  }
+
+  // Lifecycle Functions
 
   componentWillMount(){
   // Add a listener to the store, so when it changes handle store change can be fired which eventually re-renders the component
    MovieStore.addChangeListener(this.handleStoreChange.bind(this));
+   this.getAllMovies()
   }
 
   componentWillUnmount(){
@@ -24,14 +38,7 @@ class Home extends Component {
     MovieStore.removeChangeListener(this.handleStoreChange.bind(this));
   }
 
-  getMovies(){
-    MovieActions.getMovies(); // Get data from store
-  }
-
-  handleStoreChange(){
-    var data = MovieStore.getMovies();
-    this.setState({movies: data});
-  }
+  // Render Function
 
   renderMovies() {
     var allMovies = []
@@ -46,7 +53,9 @@ class Home extends Component {
       <section id="content">
         <div className="content-wrap">
           <div className="container clearfix">
-            {this.renderMovies()}
+            <div className="row row-movies">
+              {this.renderMovies()}
+            </div>
           </div>
         </div>
       </section>

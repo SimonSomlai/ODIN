@@ -31,7 +31,8 @@ class NewMovie extends Component {
     for(var prop in formFields){
       formFields[prop].value = ""
     }
-    MovieActions.addMovie(this.state);
+    MovieActions.createMovie(this.state);
+    window.location = "http://localhost:3001/"
   }
 
   render() {

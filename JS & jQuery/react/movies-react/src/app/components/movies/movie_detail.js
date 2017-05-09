@@ -22,9 +22,11 @@ class MovieDetail extends Component {
     }
   }
 
-  componentWillMount() {
+  // Helper Functions
+
+  handleStoreChange(){
     var movie = MovieStore.findMovie(this.props.params.id)
-    this.setState({movie: movie})
+    this.setState({movie: movie});
   }
 
   toggleEditing(){
@@ -32,8 +34,7 @@ class MovieDetail extends Component {
   }
 
   updateMovie(){
-    console.log('this.state', this.state.movie.images);
-    // this.state.movie.images = this.state.movie.images.split(" ")
+    console.log('this.state', this.state);
     var formFields = this.refs, isEditing = this.state.isEditing; // Grab the input from the formfields & current editing state
     for(var prop in formFields){
       if(prop === "images"){
@@ -42,14 +43,38 @@ class MovieDetail extends Component {
         this.state.movie[prop] = formFields[prop].value; // Change the state fields with new input values
       }
     }
-    MovieActions.updateMovie(this.state.movie); // Trigger action, which triggers dispatcher, which updates store, which broadcasts event
-    this.setState({movie: this.state.movie});
-    this.toggleEditing()
+    console.log(this.props.params.id)
+    MovieActions.updateMovie(this.props.params.id, this.state.movie); // Trigger action, which triggers dispatcher, which updates store, which broadcasts event
+    this.setState({movie: this.state.movie, isEditing: !this.state.isEditing});
   }
+
+  // Lifecycle Functions
+
+  componentWillMount() {
+    // Add listener to the component.
+    MovieStore.addChangeListener(this.handleStoreChange.bind(this));
+
+    console.log('searching movie in store');
+    var movie = MovieStore.findMovie(this.props.params.id)
+    if(movie){
+      console.log('movie found in store');
+      this.setState({movie: movie})
+    } else {
+      console.log('movie not in store, getting movie from API');
+      MovieActions.getMovie(this.props.params.id)
+    }
+  }
+
+  componentWillUnmount(){
+    // Remove the listener from the component.
+    MovieStore.removeChangeListener(this.handleStoreChange.bind(this));
+  }
+
+  // Render Functions
 
   renderContent(){
     const {
-      id,
+      _id,
       name,
       actors,
       description,

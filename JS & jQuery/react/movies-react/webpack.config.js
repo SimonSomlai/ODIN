@@ -5,7 +5,7 @@ const path = require('path'),
 module.exports = {
   devtool: 'source-map',
   devserver: {
-    port: '3000',
+    port: '3001',
     browser: 'default'
   },
   entry: {
